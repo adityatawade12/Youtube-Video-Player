@@ -22,7 +22,11 @@ export default class App extends Component {
 
     
     })
-    this.setState({videos:response.data.items})
+    this.setState({
+      videos:response.data.items,
+      selectedVideo:response.data.items[0]
+    
+    })
     
   }
 
@@ -31,15 +35,30 @@ export default class App extends Component {
     this.setState({selectedVideo:video})
   }
 
+  componentDidMount(){
+    this.submitData('Epicurious');
+  }
+
   render() {
     return (
-      <div className='ui container'>
+      <div className='ui '>
         <SearchBar onSubmit={this.submitData}/>
-        I have found {this.state.videos.length} videos
+        <div className="ui page-content">
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+            <VideoDetail video={this.state.selectedVideo}/>
+            </div>
+          <div className="five wide column">
+          <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} />
+          </div>
 
-        <VideoDetail video={this.state.selectedVideo}/>
-
-        <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} />
+        
+          </div>
+        </div>
+        </div>
+        
+        
         
       </div>
       

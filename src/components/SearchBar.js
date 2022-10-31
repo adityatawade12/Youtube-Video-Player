@@ -18,16 +18,16 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-        <div className='search-bar ui segment'>
+        <div className='search-bar ui segment' style={{background:'black'}}>
       
       <form className='ui form' onSubmit={(e)=>this.handleSubmit(e)}>
         <div className="inline fields">
-        <div className="field fourteen wide">
+        <div className="field fifteen wide">
             <input value={this.state.text} type='text' placeholder='Search...' onChange={this.changeHandler}  />
             
             </div>
             <div className="field">
-            <button className="ui button" type="submit">Submit</button>
+            <button className="ui button" type="submit">Search</button>
             </div>
         </div>
             
