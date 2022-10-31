@@ -22,7 +22,11 @@ export default class SearchBar extends Component {
       
       <form className='ui form' onSubmit={(e)=>this.handleSubmit(e)}>
         <div className="inline fields">
-        <div className="field fifteen wide">
+          <div className="field wide three video-item" >
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="" style={{height:"50px",margin:"0 auto"}}/>
+            
+          </div>
+        <div className="field nine wide">
             <input value={this.state.text} type='text' placeholder='Search...' onChange={this.changeHandler}  />
             
             </div>
