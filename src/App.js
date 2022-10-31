@@ -1,12 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-}
+import React, { Component } from 'react'
+import SearchBar from './components/SearchBar';
 
-export default App;
+export default class App extends Component {
+  submitData=(e)=>{
+    console.log("bye")
+  }
+  render() {
+    return (
+      <div className='ui container'>
+        <SearchBar onSubmit={this.submitData}/>
+        
+      </div>
+      
+    );
+  }
+}
