@@ -1,4 +1,4 @@
-# Simple Youtube Video Player
+# Youtube Video Player
 
 A simple React app to search and view Youtube videos.
 
