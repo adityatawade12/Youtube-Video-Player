@@ -65,5 +65,3 @@ export default class App extends Component {
     );
   }
 }
-
-//AIzaSyA6ALaEf8xi4cl9_MJnFbkknEb9VCPnRzU
